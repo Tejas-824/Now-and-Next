@@ -1,0 +1,127 @@
+*{
+box-sizing: border-box;
+}
+body{
+    background-color: #F7F8FA;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 16px;
+    padding: 0 16px;
+}
+.title{
+font-size: 54px;
+text-align: center;
+}
+.title span{
+    color: brown;
+}
+.container{
+background-color: #FFFFFF;
+max-width: 600px;
+margin-inline: auto;
+border-radius: 15px;
+padding: 32px 48px;
+box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.1);
+}
+.progress-label{
+    font-size: 14px;
+    color: #717070;
+}
+.progress-bar {
+    height: 24px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.progress-value {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(135deg, #59d5f1, #c471ed, #f64f59);
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 12px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: width 0.2s ease-in-out;
+}
+.error-label{
+    color: red;
+    font-size: 12px;
+    margin-top: 6px;
+    display: none;
+}
+.show-error .error-label{
+    display: block;
+}
+.goal-container{
+    border: 1px solid rgba(104, 96, 96, 0.3);
+    border-radius: 16px;
+    height: 82px;
+    display: flex;
+    align-items: center; 
+    padding: 0 22px;
+    margin-top: 36px;
+}
+.check-box{
+width: 24px;
+height: 24px;
+border: 1px solid rgba(104, 96, 96, 0.3);
+border-radius: 50%;
+flex-shrink: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.check-box img{
+width: 13px;
+height: 15px;
+}
+.check-icon{
+    display: none;
+}
+.completed .check-icon {
+    display: block;
+}
+.completed .input-text{
+text-decoration: line-through;
+color: #6f6d6d;
+}
+.input-text{
+    margin-left: 22px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    cursor: pointer;
+    width: 100%;
+}
+.quote{
+    font-weight: 700;
+    text-align: center;
+    margin-top: 48px;
+}
+
+
+
+@media (max-width: 768px){
+    .title {
+        font-style: 32px;
+    }
+    .container{
+        padding: 16px 32px;
+    }
+    .goal-container{
+        height: 64px;
+        margin-bottom: 24px;
+        border-radius: 14px;
+    }
+    .check-box{
+        height: 20px;
+        width: 20px;
+    }
+}
